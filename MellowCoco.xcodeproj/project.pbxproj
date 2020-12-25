@@ -13,6 +13,7 @@
 		089FAD1C2595B21700EBC06C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089FAD1B2595B21700EBC06C /* Preview Assets.xcassets */; };
 		089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD1D2595B21700EBC06C /* Persistence.swift */; };
 		089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD1F2595B21700EBC06C /* MellowCoco.xcdatamodeld */; };
+		089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD292595B39A00EBC06C /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		089FAD1D2595B21700EBC06C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		089FAD202595B21700EBC06C /* MellowCoco.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MellowCoco.xcdatamodel; sourceTree = "<group>"; };
 		089FAD222595B21700EBC06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089FAD292595B39A00EBC06C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				089FAD142595B21600EBC06C /* MellowCocoApp.swift */,
 				089FAD162595B21600EBC06C /* ContentView.swift */,
+				089FAD292595B39A00EBC06C /* WelcomeView.swift */,
 				089FAD182595B21700EBC06C /* Assets.xcassets */,
 				089FAD1D2595B21700EBC06C /* Persistence.swift */,
 				089FAD222595B21700EBC06C /* Info.plist */,
@@ -147,6 +150,7 @@
 				089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */,
 				089FAD172595B21600EBC06C /* ContentView.swift in Sources */,
 				089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */,
+				089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */,
 				089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

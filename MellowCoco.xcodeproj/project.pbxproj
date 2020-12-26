@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD1D2595B21700EBC06C /* Persistence.swift */; };
 		089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD1F2595B21700EBC06C /* MellowCoco.xcdatamodeld */; };
 		089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD292595B39A00EBC06C /* WelcomeView.swift */; };
+		08BEC45C2596F656004DE900 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 08BEC45B2596F656004DE900 /* Moya */; };
+		08BEC462259705B3004DE900 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC461259705B3004DE900 /* Category.swift */; };
+		08BEC46625970751004DE900 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46525970751004DE900 /* Result.swift */; };
+		08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC4692597095E004DE900 /* RequestAPI.swift */; };
+		08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46F259727F5004DE900 /* CocoNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,10 @@
 		089FAD202595B21700EBC06C /* MellowCoco.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MellowCoco.xcdatamodel; sourceTree = "<group>"; };
 		089FAD222595B21700EBC06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089FAD292595B39A00EBC06C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		08BEC461259705B3004DE900 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		08BEC46525970751004DE900 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		08BEC4692597095E004DE900 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
+		08BEC46F259727F5004DE900 /* CocoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BEC45C2596F656004DE900 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +68,12 @@
 		089FAD132595B21600EBC06C /* MellowCoco */ = {
 			isa = PBXGroup;
 			children = (
+				08BEC46825970857004DE900 /* API */,
+				08BEC46025970565004DE900 /* ViewModel */,
+				08BEC45F2597055D004DE900 /* Model */,
+				08BEC45E2597054A004DE900 /* View */,
 				089FAD142595B21600EBC06C /* MellowCocoApp.swift */,
 				089FAD162595B21600EBC06C /* ContentView.swift */,
-				089FAD292595B39A00EBC06C /* WelcomeView.swift */,
 				089FAD182595B21700EBC06C /* Assets.xcassets */,
 				089FAD1D2595B21700EBC06C /* Persistence.swift */,
 				089FAD222595B21700EBC06C /* Info.plist */,
@@ -76,6 +89,39 @@
 				089FAD1B2595B21700EBC06C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08BEC45E2597054A004DE900 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				089FAD292595B39A00EBC06C /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08BEC45F2597055D004DE900 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08BEC461259705B3004DE900 /* Category.swift */,
+				08BEC46525970751004DE900 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08BEC46025970565004DE900 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08BEC46825970857004DE900 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				08BEC4692597095E004DE900 /* RequestAPI.swift */,
+				08BEC46F259727F5004DE900 /* CocoNetwork.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +140,9 @@
 			dependencies = (
 			);
 			name = MellowCoco;
+			packageProductDependencies = (
+				08BEC45B2596F656004DE900 /* Moya */,
+			);
 			productName = MellowCoco;
 			productReference = 089FAD112595B21600EBC06C /* MellowCoco.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 089FAD082595B21600EBC06C;
+			packageReferences = (
+				08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 089FAD122595B21600EBC06C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,9 +201,13 @@
 			files = (
 				089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */,
 				089FAD172595B21600EBC06C /* ContentView.swift in Sources */,
+				08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */,
 				089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */,
+				08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */,
 				089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */,
+				08BEC46625970751004DE900 /* Result.swift in Sources */,
 				089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */,
+				08BEC462259705B3004DE900 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08BEC45B2596F656004DE900 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		089FAD1F2595B21700EBC06C /* MellowCoco.xcdatamodeld */ = {

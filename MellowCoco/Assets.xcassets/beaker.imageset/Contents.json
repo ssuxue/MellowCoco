@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "beaker.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "milk_bottle_60.074957410562px_1292830_easyicon.net.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "milk_bottle_67.584327086882px_1292830_easyicon.net.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

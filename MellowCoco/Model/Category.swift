@@ -37,10 +37,10 @@ func getCategory(url: String, completion : @escaping (Result)->()) {
 }
 
 var categoryData = [
-    Category(id: 0, name: "夏日清爽", icon: "juice"),
+    Category(id: 0, name: "夏日清爽", icon: "reason"),
     Category(id: 1, name: "夏日清爽", icon: "energy"),
-    Category(id: 2, name: "夏日清爽", icon: "energy"),
-    Category(id: 3, name: "夏日清爽", icon: "juice"),
-    Category(id: 4, name: "夏日清爽", icon: "juice"),
+    Category(id: 2, name: "夏日清爽", icon: "cherry"),
+    Category(id: 3, name: "夏日清爽", icon: "reason"),
+    Category(id: 4, name: "夏日清爽", icon: "reason"),
     Category(id: 5, name: "夏日清爽", icon: "energy"),
 ]

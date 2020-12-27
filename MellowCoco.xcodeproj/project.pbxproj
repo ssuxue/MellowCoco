@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083055412598A62D006F758C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 083055402598A62D006F758C /* SDWebImageSwiftUI */; };
 		089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD142595B21600EBC06C /* MellowCocoApp.swift */; };
 		089FAD172595B21600EBC06C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD162595B21600EBC06C /* ContentView.swift */; };
 		089FAD192595B21700EBC06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089FAD182595B21700EBC06C /* Assets.xcassets */; };
@@ -19,6 +20,14 @@
 		08BEC46625970751004DE900 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46525970751004DE900 /* Result.swift */; };
 		08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC4692597095E004DE900 /* RequestAPI.swift */; };
 		08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46F259727F5004DE900 /* CocoNetwork.swift */; };
+		08E450C625974BDC007E3618 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450C525974BDC007E3618 /* BottomView.swift */; };
+		08E450C9259750E0007E3618 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450C8259750E0007E3618 /* OrderView.swift */; };
+		08E450CC25975C3E007E3618 /* IndentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450CB25975C3E007E3618 /* IndentView.swift */; };
+		08E450CF25975C78007E3618 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450CE25975C78007E3618 /* ShopView.swift */; };
+		08E450D225975C8E007E3618 /* MyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450D125975C8E007E3618 /* MyInfoView.swift */; };
+		08E450D525975E97007E3618 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450D425975E97007E3618 /* Product.swift */; };
+		08E450D9259762F3007E3618 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450D8259762F3007E3618 /* ProductViewModel.swift */; };
+		08E450DC259768EC007E3618 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450DB259768EC007E3618 /* Attribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,14 @@
 		08BEC46525970751004DE900 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		08BEC4692597095E004DE900 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		08BEC46F259727F5004DE900 /* CocoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoNetwork.swift; sourceTree = "<group>"; };
+		08E450C525974BDC007E3618 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		08E450C8259750E0007E3618 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		08E450CB25975C3E007E3618 /* IndentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentView.swift; sourceTree = "<group>"; };
+		08E450CE25975C78007E3618 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		08E450D125975C8E007E3618 /* MyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoView.swift; sourceTree = "<group>"; };
+		08E450D425975E97007E3618 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		08E450D8259762F3007E3618 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		08E450DB259768EC007E3618 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083055412598A62D006F758C /* SDWebImageSwiftUI in Frameworks */,
 				08BEC45C2596F656004DE900 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +112,12 @@
 		08BEC45E2597054A004DE900 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				08E450CB25975C3E007E3618 /* IndentView.swift */,
+				08E450C525974BDC007E3618 /* BottomView.swift */,
 				089FAD292595B39A00EBC06C /* WelcomeView.swift */,
+				08E450C8259750E0007E3618 /* OrderView.swift */,
+				08E450CE25975C78007E3618 /* ShopView.swift */,
+				08E450D125975C8E007E3618 /* MyInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +127,8 @@
 			children = (
 				08BEC461259705B3004DE900 /* Category.swift */,
 				08BEC46525970751004DE900 /* Result.swift */,
+				08E450D425975E97007E3618 /* Product.swift */,
+				08E450DB259768EC007E3618 /* Attribute.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +136,7 @@
 		08BEC46025970565004DE900 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				08E450D8259762F3007E3618 /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,6 +168,7 @@
 			name = MellowCoco;
 			packageProductDependencies = (
 				08BEC45B2596F656004DE900 /* Moya */,
+				083055402598A62D006F758C /* SDWebImageSwiftUI */,
 			);
 			productName = MellowCoco;
 			productReference = 089FAD112595B21600EBC06C /* MellowCoco.app */;
@@ -172,6 +199,7 @@
 			mainGroup = 089FAD082595B21600EBC06C;
 			packageReferences = (
 				08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */,
+				0830553F2598A62D006F758C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 089FAD122595B21600EBC06C /* Products */;
 			projectDirPath = "";
@@ -199,15 +227,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E450D225975C8E007E3618 /* MyInfoView.swift in Sources */,
 				089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */,
 				089FAD172595B21600EBC06C /* ContentView.swift in Sources */,
 				08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */,
 				089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */,
 				08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */,
+				08E450D525975E97007E3618 /* Product.swift in Sources */,
 				089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */,
 				08BEC46625970751004DE900 /* Result.swift in Sources */,
 				089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */,
+				08E450CC25975C3E007E3618 /* IndentView.swift in Sources */,
+				08E450CF25975C78007E3618 /* ShopView.swift in Sources */,
+				08E450C9259750E0007E3618 /* OrderView.swift in Sources */,
 				08BEC462259705B3004DE900 /* Category.swift in Sources */,
+				08E450D9259762F3007E3618 /* ProductViewModel.swift in Sources */,
+				08E450DC259768EC007E3618 /* Attribute.swift in Sources */,
+				08E450C625974BDC007E3618 /* BottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +432,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0830553F2598A62D006F758C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 		08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -407,6 +451,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		083055402598A62D006F758C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830553F2598A62D006F758C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		08BEC45B2596F656004DE900 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08BEC45A2596F656004DE900 /* XCRemoteSwiftPackageReference "Moya" */;

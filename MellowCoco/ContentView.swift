@@ -10,7 +10,7 @@ import Moya
 
 struct ContentView: View {
     var body: some View {
-        DashBoardView()
+        BottomView()
     }
 }
 
@@ -23,7 +23,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct DashBoardView : View {
     @State var index = 0
-    @State var categories : [Category] = []
+    @State var categories: [Category] = []
     
     var body: some View {
         VStack {

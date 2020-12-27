@@ -13,3 +13,10 @@ struct Result : Decodable {
     var message: String
     var data : [Category]
 }
+
+// TODO 后面用泛型优化这一堆 Result
+struct ProductResult : Decodable {
+    var code : Int
+    var message: String
+    var data : [Product]
+}

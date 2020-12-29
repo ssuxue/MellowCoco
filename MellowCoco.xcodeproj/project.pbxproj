@@ -23,6 +23,8 @@
 		08BEC46625970751004DE900 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46525970751004DE900 /* Result.swift */; };
 		08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC4692597095E004DE900 /* RequestAPI.swift */; };
 		08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BEC46F259727F5004DE900 /* CocoNetwork.swift */; };
+		08C8705B259B361100A6DB12 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8705A259B361100A6DB12 /* Theme.swift */; };
+		08C8705E259B387D00A6DB12 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8705D259B387D00A6DB12 /* ThemeView.swift */; };
 		08E450C625974BDC007E3618 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450C525974BDC007E3618 /* BottomView.swift */; };
 		08E450C9259750E0007E3618 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450C8259750E0007E3618 /* OrderView.swift */; };
 		08E450CC25975C3E007E3618 /* IndentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450CB25975C3E007E3618 /* IndentView.swift */; };
@@ -50,6 +52,8 @@
 		08BEC46525970751004DE900 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		08BEC4692597095E004DE900 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		08BEC46F259727F5004DE900 /* CocoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoNetwork.swift; sourceTree = "<group>"; };
+		08C8705A259B361100A6DB12 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		08C8705D259B387D00A6DB12 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		08E450C525974BDC007E3618 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		08E450C8259750E0007E3618 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		08E450CB25975C3E007E3618 /* IndentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				08E450C8259750E0007E3618 /* OrderView.swift */,
 				08E450CE25975C78007E3618 /* ShopView.swift */,
 				08E450D125975C8E007E3618 /* MyInfoView.swift */,
+				08C8705D259B387D00A6DB12 /* ThemeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				08E450D425975E97007E3618 /* Product.swift */,
 				08E450DB259768EC007E3618 /* Attribute.swift */,
 				083399B42599FF2B00191633 /* User.swift */,
+				08C8705A259B361100A6DB12 /* Theme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,11 +248,13 @@
 				08BEC46A2597095E004DE900 /* RequestAPI.swift in Sources */,
 				089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */,
 				08BEC470259727F5004DE900 /* CocoNetwork.swift in Sources */,
+				08C8705B259B361100A6DB12 /* Theme.swift in Sources */,
 				08E450D525975E97007E3618 /* Product.swift in Sources */,
 				089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */,
 				08BEC46625970751004DE900 /* Result.swift in Sources */,
 				089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */,
 				08E450CC25975C3E007E3618 /* IndentView.swift in Sources */,
+				08C8705E259B387D00A6DB12 /* ThemeView.swift in Sources */,
 				08E450CF25975C78007E3618 /* ShopView.swift in Sources */,
 				08E450C9259750E0007E3618 /* OrderView.swift in Sources */,
 				083399BC259A01A100191633 /* UserViewModel.swift in Sources */,

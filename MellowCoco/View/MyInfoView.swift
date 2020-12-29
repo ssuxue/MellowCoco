@@ -25,7 +25,8 @@ struct MyInfoView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     
-                    if user.isLogged {
+//                    if user.isLogged {
+                    if true {
                         HasLoginView(avatar: self.avatar)
                     }
                     else {
@@ -173,10 +174,15 @@ struct HasLoginView: View {
                 }
                 Divider()
                 
-                HStack {
-                    Text("主题")
-                    Spacer()
+                NavigationLink(
+                    destination: ThemeView()) {
+                    HStack {
+                        Text("主题")
+                            .foregroundColor(.black)
+                        Spacer()
+                    }
                 }
+                
                 Divider()
                 
                 HStack {

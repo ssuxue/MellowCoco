@@ -9,17 +9,32 @@ import Foundation
 
 struct Product : Identifiable, Decodable {
     var id: Int
-    var product_category_id: Int
-    var product_attribute_ids: String
+    var productCategoryId: Int
+    var productAttributeIds: String
     var name: String
     var picture: String
-    var new_status: Int8
-    var recommend_status: Int8
-    var verify_status: Int8
+    var newStatus: Int8
+    var recommendStatus: Int8
+    var verifyStatus: Int8
     var sale: Int
     var price: Int
     var description: String
-    var album_pics: String
+    var albumPics: String
+    
+    enum CodingKeys : String, CodingKey {
+        case id
+        case productCategoryId = "product_category_id"
+        case productAttributeIds = "product_attribute_ids"
+        case name
+        case picture
+        case newStatus = "new_status"
+        case recommendStatus = "recommend_status"
+        case verifyStatus = "verify_status"
+        case sale
+        case price
+        case description
+        case albumPics = "album_pics"
+    }
 }
 
 func getProducts(url: String, completion : @escaping (ProductResult)->()) {

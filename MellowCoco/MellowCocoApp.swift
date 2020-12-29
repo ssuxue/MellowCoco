@@ -15,6 +15,7 @@ struct MellowCocoApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(UserViewModel())
         }
     }
 }

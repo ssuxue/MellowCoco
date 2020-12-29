@@ -12,15 +12,17 @@ struct OrderView: View {
     
 //    @State var showColor: Bool
     @State var cid: Int = 2
-    @State var products: [Product] = []
+    @State var categories: [Category] = []
     @State private var showCard = false
+    @ObservedObject var viewModel: ProductViewModel = ProductViewModel()
+    @ObservedObject var categoryVM: CategoryViewModel = CategoryViewModel()
     
     var body: some View {
         ZStack {
             HStack {
                 VStack {
                     ScrollView {
-                        ForEach(categoryData) { item in
+                        ForEach(categoryVM.categories) { item in
                             VStack {
                                 Image(item.icon)
                                 Text(item.name)
@@ -32,6 +34,8 @@ struct OrderView: View {
                             )
                             .onTapGesture {
                                 self.cid = item.id
+                                
+                                viewModel.fetchProducts(id: self.cid)
                             }
                         }
                     }
@@ -41,7 +45,7 @@ struct OrderView: View {
                 
                 VStack {
                     ScrollView {
-                        ForEach(productList) { item in
+                        ForEach(viewModel.products) { item in
                             HStack {
                                 VStack(alignment: .center) {
                                     WebImage(url: URL(string: item.picture))
@@ -54,7 +58,10 @@ struct OrderView: View {
                                         .font(.system(size: 20, weight: .medium))
                                         .lineLimit(1)
                                     HStack {
-                                        self.item(tag: "新品", color: Color.green)
+                                        if (item.newStatus == 1) {
+                                            self.item(tag: "新品", color: Color.green)
+                                        }
+                                        
                                         self.item(tag: "含乳及乳制品", color: Color.gray)
                                     }
                                     Text(item.description)
@@ -67,7 +74,7 @@ struct OrderView: View {
                                         Spacer()
                                         
                                         Button(action: {
-                                            self.showCard = true
+                                            self.showCard.toggle()
                                         }, label: {
                                             Text("选规格")
                                                 .font(.system(size: 16, weight: .medium))
@@ -89,16 +96,13 @@ struct OrderView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
             .onAppear {
-                getProducts(url: "http://192.168.124.9:8080/getBubbleTeaByCid/2") { (result) in
-                    if result.code == 200 {
-                        self.products = result.data
-                    }
-
-                }
-    //            self.products = changeProducts(url: "http://192.168.124.9:8080/getBubbleTeaByCid/2")
+                viewModel.fetchProducts(id: self.cid)
+                
+                categoryVM.fetchData()
+                
             }
             if self.showCard {
-                CustomActionSheet()
+                CustomActionSheet(showCard: self.$showCard)
             }
         }
     }
@@ -122,18 +126,86 @@ struct OrderView_Previews: PreviewProvider {
 let screen = UIScreen.main.bounds
 
 let productList = [
-    Product(id: 1, product_category_id: 2, product_attribute_ids: "1,2", name: "酒酿桂花冻", picture: "https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nzuey29j22c0340e82.jpg", new_status: 1, recommend_status: 1, verify_status: 1, sale: 1232, price: 26, description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。", album_pics: "https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nzuey29j22c0340e82.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg"),
-    Product(id: 2, product_category_id: 2, product_attribute_ids: "1,2", name: "生打椰椰芒", picture: "https://wx4.sinaimg.cn/bmiddle/006lsU1Xly1gl9az260gmj30u014043z.jpg", new_status: 1, recommend_status: 1, verify_status: 1, sale: 1232, price: 25, description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。", album_pics: "https://wx4.sinaimg.cn/bmiddle/006lsU1Xly1gl9az260gmj30u014043z.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg"),
-    Product(id: 3, product_category_id: 2, product_attribute_ids: "1,2", name: "冰博克厚牛乳波波", picture: "https://ww3.sinaimg.cn/bmiddle/006nsVfNgy1gl9c716eeuj325s2vpe82.jpg", new_status: 1, recommend_status: 1, verify_status: 1, sale: 1232, price: 21, description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。", album_pics: "https://ww3.sinaimg.cn/bmiddle/006nsVfNgy1gl9c716eeuj325s2vpe82.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg")
+    Product(
+        id: 1,
+        productCategoryId: 2,
+        productAttributeIds: "1,2",
+        name: "酒酿桂花冻",
+        picture: "https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nzuey29j22c0340e82.jpg",
+        newStatus: 1,
+        recommendStatus: 1,
+        verifyStatus: 1,
+        sale: 1232,
+        price: 26,
+        description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。",
+        albumPics: "https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nzuey29j22c0340e82.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg"),
+    Product(
+        id: 2,
+        productCategoryId: 2,
+        productAttributeIds: "1,2",
+        name: "生打椰椰芒",
+        picture: "https://wx4.sinaimg.cn/bmiddle/006lsU1Xly1gl9az260gmj30u014043z.jpg",
+        newStatus: 1,
+        recommendStatus: 1,
+        verifyStatus: 1,
+        sale: 1232,
+        price: 25,
+        description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。",
+        albumPics: "https://wx4.sinaimg.cn/bmiddle/006lsU1Xly1gl9az260gmj30u014043z.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg"),
+    Product(
+        id: 3,
+        productCategoryId: 2,
+        productAttributeIds: "1,2",
+        name: "冰博克厚牛乳波波",
+        picture: "https://ww3.sinaimg.cn/bmiddle/006nsVfNgy1gl9c716eeuj325s2vpe82.jpg",
+        newStatus: 1,
+        recommendStatus: 1,
+        verifyStatus: 1,
+        sale: 1232,
+        price: 21,
+        description: "冷热皆宜 冷/热 500ml 定制红茶茗茶调和牛乳醇香，浓郁的气息充满了屋子。",
+        albumPics: "https://ww3.sinaimg.cn/bmiddle/006nsVfNgy1gl9c716eeuj325s2vpe82.jpg,https://ww1.sinaimg.cn/bmiddle/882f5c5fly1gm1nqol91aj22ds1sckjm.jpg"),
 ]
 
 struct CustomActionSheet: View {
+    
+    @Binding var showCard: Bool
+    
     var body: some View {
         VStack(spacing: 10.0) {
-            WebImage(url: URL(string: "https://wx2.sinaimg.cn/mw690/a0bf4f85gy1gjsbogj0mdj23464t2u10.jpg"))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: screen.width * 0.25)
+            ZStack {
+                WebImage(url: URL(string: "https://wx2.sinaimg.cn/mw690/a0bf4f85gy1gjsbogj0mdj23464t2u10.jpg"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: screen.width * 0.25)
+                
+                HStack(spacing: 10.0) {
+                    Spacer()
+                    VStack {
+                        Image(systemName: "arrowshape.turn.up.right")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(.white)
+                    }.padding(.all)
+                    .frame(width: 32, height: 32)
+                    .background(Color.gray.opacity(0.5))
+                    .clipShape(Circle())
+                    .offset(y: -60)
+                    
+                    VStack {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 16, weight: .medium))
+                            .foregroundColor(.white)
+                    }.padding(.all)
+                    .frame(width: 32, height: 32)
+                    .background(Color.gray.opacity(0.5))
+                    .clipShape(Circle())
+                    .offset(y: -60)
+                    .onTapGesture {
+                        self.showCard.toggle()
+                    }
+                }
+                .offset(y: 10)
+            }
             
             VStack(alignment: .leading) {
                 HStack {
@@ -194,9 +266,11 @@ struct CustomActionSheet: View {
             alignment: .center
         )
         .padding(.horizontal, 20)
-        .padding(.top, 25)
-        .background(Color.white)
+        .background(Color(#colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)))
         .cornerRadius(15)
+        .shadow(color: Color.black.opacity(0.1), radius: 25)
+        .shadow(color: Color.black.opacity(0.2), radius: 65, x: 0, y: -50)
+        .shadow(color: Color.black.opacity(0.2), radius: 65, x: 0, y: 50)
     }
 }
 

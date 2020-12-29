@@ -41,5 +41,6 @@ struct BottomView: View {
 struct BottomView_Previews: PreviewProvider {
     static var previews: some View {
         BottomView()
+            .environmentObject(UserViewModel())
     }
 }

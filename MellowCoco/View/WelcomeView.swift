@@ -17,12 +17,16 @@ struct WelcomeView: View {
                     )
                     .edgesIgnoringSafeArea(.all)
                 
-                if UIScreen.main.bounds.height > 800 {
+                if screen.height > 800 {
                     HomeView()
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
                         HomeView()
                     }
+                }
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    HomeView()
                 }
             }
         }
@@ -134,6 +138,10 @@ struct HomeView: View {
 struct LoginView : View {
     @State var username = ""
     @State var password = ""
+    @State var showAlert = false
+    @State var alertMessage = "出错了"
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var user: UserViewModel
     
     var body : some View {
         VStack {
@@ -176,6 +184,17 @@ struct LoginView : View {
         }
         
         Button(action: {
+            self.user.login(username: username, password: password)
+            
+            if self.user.isLogged {
+                self.username = ""
+                self.password = ""
+                self.presentationMode.wrappedValue.dismiss()
+            }
+            else {
+                self.showAlert = true
+                self.alertMessage = "用户名或密码错误"
+            }
             
         }) {
             Text("登录")
@@ -194,6 +213,9 @@ struct LoginView : View {
         .offset(y: -40)
         .padding(.bottom, -40)
         .shadow(radius: 15)
+        .alert(isPresented: $showAlert, content: {
+            Alert(title: Text("错误"), message: Text(self.alertMessage), dismissButton: .default(Text("确定")))
+        })
     }
 }
 

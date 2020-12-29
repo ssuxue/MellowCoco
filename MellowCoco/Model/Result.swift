@@ -20,3 +20,9 @@ struct ProductResult : Decodable {
     var message: String
     var data : [Product]
 }
+
+struct UserResult : Decodable {
+    var code : Int
+    var message: String
+    var data : [User]
+}

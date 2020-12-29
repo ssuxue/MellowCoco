@@ -11,6 +11,8 @@ import Moya
 // moya请求地址枚举
 public enum RequestAPI {
     case login(username: String, password: String)
+    // 指纹登录
+    case loginByFingerPrint(fingerPrint: String)
     case getCategoty
     case getBubbleTeas(id: Int)
 }
@@ -22,6 +24,8 @@ extension RequestAPI: TargetType {
         switch self {
         case .login(_, _):
             return "/user/login"
+        case .loginByFingerPrint(_):
+            return "/user/loginByFingerPrint"
         case .getCategoty:
             return "getAllCategory"
         case .getBubbleTeas(let id):
@@ -32,7 +36,7 @@ extension RequestAPI: TargetType {
         switch self {
         case .getCategoty, .getBubbleTeas:
             return .get
-        case .login:
+        case .login, .loginByFingerPrint:
             return .post
         }
     }
@@ -41,9 +45,11 @@ extension RequestAPI: TargetType {
         case .getCategoty, .getBubbleTeas: // Send no parameters
             return .requestPlain
         case let .login(username, password):  // Always sends parameters in URL, regardless of which HTTP method is used
-            return .requestParameters(parameters: ["username": username, "password": password], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["username": username, "password": password], encoding: JSONEncoding.default)
 //        case let .createUser(firstName, lastName): // Always send parameters as JSON in request body
 //            return .requestParameters(parameters: ["first_name": firstName, "last_name": lastName], encoding: JSONEncoding.default)
+        case let .loginByFingerPrint(fingerPrint: fingerPrint):
+            return .requestParameters(parameters: ["fingerPrint": fingerPrint], encoding: JSONEncoding.default)
         }
     }
     public var sampleData: Data {
@@ -54,6 +60,8 @@ extension RequestAPI: TargetType {
             return "{\"id\": \(id), \"first_name\": \"Harry\", \"last_name\": \"Potter\"}".utf8Encoded
         case .login(let username, let password):
             return "{\"usernae\": \"\(username)\", \"last_name\": \"\(password)\"}".utf8Encoded
+        case .loginByFingerPrint(let fingerPrint):
+            return "{\"fingerPrint\": \"\(fingerPrint)\"}".utf8Encoded
         }
     }
     public var headers: [String: String]? {

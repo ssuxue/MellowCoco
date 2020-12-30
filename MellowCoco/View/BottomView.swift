@@ -47,3 +47,31 @@ struct BottomView_Previews: PreviewProvider {
             .environmentObject(UserViewModel())
     }
 }
+
+// loading animation
+struct Loader: View {
+    @State var animate = false
+    
+    var body: some View {
+        VStack {
+            Circle()
+                .trim(from: 0, to: 0.8)
+                .stroke(
+                    AngularGradient(
+                        gradient: .init(colors: [.pink, .purple]),
+                        center: .center),
+                    style: StrokeStyle(lineWidth: 6, lineCap: .round)
+                )
+                .frame(width: 35, height: 35)
+                .rotationEffect(.init(degrees: self.animate ? 360 : 0))
+                .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
+        }
+        .padding(20)
+        .background(Color.white)
+        .clipShape(Circle())
+        .shadow(color: Color.black.opacity(0.2), radius: 5)
+        .onAppear {
+            self.animate.toggle()
+        }
+    }
+}

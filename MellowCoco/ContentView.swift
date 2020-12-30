@@ -95,8 +95,9 @@ struct DashBoardView : View {
             
             // loading progress if data is null
             if categories.isEmpty {
-                Spacer()
-                ProgressView()
+//                ProgressView()
+                // custom loading animation
+                Loader()
             }
             else {
                 // Tab view with swipe gesture

@@ -66,7 +66,7 @@ struct Loader: View {
                 .rotationEffect(.init(degrees: self.animate ? 360 : 0))
                 .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
         }
-        .padding(20)
+        .padding(15)
         .background(Color.white)
         .clipShape(Circle())
         .shadow(color: Color.black.opacity(0.2), radius: 5)

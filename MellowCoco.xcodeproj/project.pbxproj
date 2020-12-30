@@ -11,6 +11,7 @@
 		083055412598A62D006F758C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 083055402598A62D006F758C /* SDWebImageSwiftUI */; };
 		083399B52599FF2B00191633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083399B42599FF2B00191633 /* User.swift */; };
 		083399BC259A01A100191633 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083399BB259A01A100191633 /* UserViewModel.swift */; };
+		08684CBD259C723100C45AEF /* Periphery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684CBC259C723100C45AEF /* Periphery.swift */; };
 		089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD142595B21600EBC06C /* MellowCocoApp.swift */; };
 		089FAD172595B21600EBC06C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD162595B21600EBC06C /* ContentView.swift */; };
 		089FAD192595B21700EBC06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089FAD182595B21700EBC06C /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		0806459E2599EBAE00FF1401 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		083399B42599FF2B00191633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		083399BB259A01A100191633 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		08684CBC259C723100C45AEF /* Periphery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periphery.swift; sourceTree = "<group>"; };
 		089FAD112595B21600EBC06C /* MellowCoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MellowCoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089FAD142595B21600EBC06C /* MellowCocoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MellowCocoApp.swift; sourceTree = "<group>"; };
 		089FAD162595B21600EBC06C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				08E450DB259768EC007E3618 /* Attribute.swift */,
 				083399B42599FF2B00191633 /* User.swift */,
 				08C8705A259B361100A6DB12 /* Theme.swift */,
+				08684CBC259C723100C45AEF /* Periphery.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				08E450C9259750E0007E3618 /* OrderView.swift in Sources */,
 				083399BC259A01A100191633 /* UserViewModel.swift in Sources */,
 				08BEC462259705B3004DE900 /* Category.swift in Sources */,
+				08684CBD259C723100C45AEF /* Periphery.swift in Sources */,
 				08E450D9259762F3007E3618 /* ProductViewModel.swift in Sources */,
 				08E450DC259768EC007E3618 /* Attribute.swift in Sources */,
 				0806459F2599EBAE00FF1401 /* CategoryViewModel.swift in Sources */,

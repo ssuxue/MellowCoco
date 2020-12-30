@@ -31,7 +31,7 @@ struct DashBoardView : View {
     var body: some View {
         VStack {
             HStack {
-                Text("饮品")
+                Text("奈雪悦色")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))

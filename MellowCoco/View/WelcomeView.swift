@@ -17,13 +17,14 @@ struct WelcomeView: View {
                     )
                     .edgesIgnoringSafeArea(.all)
                 
-                if screen.height > 800 {
-                    HomeView()
-                } else {
-                    ScrollView(.vertical, showsIndicators: false) {
-                        HomeView()
-                    }
-                }
+                // 下面这种适合没有底部菜单时
+//                if screen.height > 800 {
+//                    HomeView()
+//                } else {
+//                    ScrollView(.vertical, showsIndicators: false) {
+//                        HomeView()
+//                    }
+//                }
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     HomeView()
@@ -43,9 +44,10 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Image("illustration12")
+            Image("mixkit-girl")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .scaledToFit()
+                .frame(height: 200)
             
             HStack {
                 Button(action: {

@@ -25,8 +25,7 @@ struct MyInfoView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     
-//                    if user.isLogged {
-                    if true {
+                    if user.isLogged {
                         HasLoginView(avatar: self.avatar)
                     }
                     else {

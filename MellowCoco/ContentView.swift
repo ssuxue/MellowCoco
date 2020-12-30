@@ -9,8 +9,9 @@ import SwiftUI
 import Moya
 
 struct ContentView: View {
+    @State var currentIndex = 0
     var body: some View {
-        BottomView()
+        BottomView(currentIndex: $currentIndex)
     }
 }
 
@@ -25,6 +26,7 @@ struct ContentView_Previews: PreviewProvider {
 struct DashBoardView : View {
     @State var index = 0
     @State var categories: [Category] = []
+    @Binding var currentIndex: Int
     
     var body: some View {
         VStack {
@@ -101,10 +103,10 @@ struct DashBoardView : View {
                 TabView(selection: self.$index) {
                     
                     // loading progress if no data
-                    GridView(categoryItems: categories)
+                    GridView(categoryItems: categories, currentIndex: self.$currentIndex)
                         .tag(0)
                     
-                    GridView(categoryItems: categoryData)
+                    GridView(categoryItems: categoryData, currentIndex: self.$currentIndex)
                         .tag(1)
                     
                     VStack {
@@ -155,6 +157,7 @@ struct DashBoardView : View {
 struct GridView: View {
     var categoryItems : [Category]
     var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+    @Binding var currentIndex: Int
     
     var body: some View {
         LazyVGrid(columns: columns, spacing: 30) {
@@ -181,6 +184,9 @@ struct GridView: View {
                         .padding()
                         .background(Color.white.opacity(0.35))
                         .clipShape(Circle())
+                }
+                .onTapGesture {
+                    currentIndex = 1
                 }
             }
         }

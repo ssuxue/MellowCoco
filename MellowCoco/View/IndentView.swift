@@ -69,6 +69,17 @@ struct IndentView: View {
                 }
                 .padding(.horizontal, 20)
                 
+                VStack {
+                    Text("去点单")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                }
+                .padding(8)
+                .frame(width: screen.width * 0.45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .background(Color(#colorLiteral(red: 0.9647058824, green: 0.2549019608, blue: 0.4235294118, alpha: 1)))
+                .cornerRadius(5)
+                
                 Spacer(minLength: 0)
             }
             else {

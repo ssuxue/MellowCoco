@@ -11,7 +11,7 @@ struct WelcomeView: View {
     var body: some View {
             ZStack {
                 LinearGradient(
-                        gradient: .init(colors: [Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)), Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))]),
+                        gradient: .init(colors: [Color(#colorLiteral(red: 0.9882352941, green: 0.4039215686, blue: 0.9803921569, alpha: 1)), Color(#colorLiteral(red: 0.9568627451, green: 0.768627451, blue: 0.9529411765, alpha: 1))]),
                         startPoint: .top,
                         endPoint: .bottom
                     )
@@ -142,62 +142,73 @@ struct LoginView : View {
     @State var password = ""
     @State var showAlert = false
     @State var alertMessage = "出错了"
+    @State var isLoading = false
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var user: UserViewModel
     
     var body : some View {
-        VStack {
+        ZStack {
             VStack {
-                HStack(spacing: 15) {
-                    Image(systemName: "person")
-                        .resizable()
-                        .frame(width: 15, height: 18)
-                        .foregroundColor(.black)
-                    
-                    TextField("用户名/手机号", text: self.$username)
-                }
-                .padding(.vertical, 20)
-                
-                Divider()
-                
-                HStack(spacing: 15) {
-                    Image(systemName: "lock")
-                        .resizable()
-                        .frame(width: 15, height: 18)
-                        .foregroundColor(.black)
-                    
-                    SecureField("密码", text: self.$password)
-                    
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "eye")
+                VStack {
+                    HStack(spacing: 15) {
+                        Image(systemName: "person")
+                            .resizable()
+                            .frame(width: 15, height: 18)
                             .foregroundColor(.black)
+                        
+                        TextField("用户名/手机号", text: self.$username)
                     }
+                    .padding(.vertical, 20)
+                    
+                    Divider()
+                    
+                    HStack(spacing: 15) {
+                        Image(systemName: "lock")
+                            .resizable()
+                            .frame(width: 15, height: 18)
+                            .foregroundColor(.black)
+                        
+                        SecureField("密码", text: self.$password)
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "eye")
+                                .foregroundColor(.black)
+                        }
+                    }
+                    .padding(.vertical, 20)
                 }
-                .padding(.vertical, 20)
+                .padding(.vertical)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 40)
+                .background(Color.white)
+                .cornerRadius(10)
+                .padding(.top, 25)
             }
-            .padding(.vertical)
-            .padding(.horizontal, 20)
-            .padding(.bottom, 40)
-            .background(Color.white)
-            .cornerRadius(10)
-            .padding(.top, 25)
+            
+            if isLoading {
+                LoadingView()
+            }
         }
         
         Button(action: {
+            self.isLoading = true
             self.user.login(username: username, password: password)
             
-            if self.user.isLogged {
-                self.username = ""
-                self.password = ""
-                self.presentationMode.wrappedValue.dismiss()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                if self.user.isLogged {
+                    self.isLoading = false
+                    self.username = ""
+                    self.password = ""
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                else {
+                    self.isLoading = false
+                    self.showAlert = true
+                    self.alertMessage = "用户名或密码错误"
+                }
             }
-            else {
-                self.showAlert = true
-                self.alertMessage = "用户名或密码错误"
-            }
-            
         }) {
             Text("登录")
                 .foregroundColor(.white)
@@ -207,7 +218,7 @@ struct LoginView : View {
         }
         .background(
             LinearGradient(
-                gradient: .init(colors: [Color(#colorLiteral(red: 0.9803921569, green: 0.4862745098, blue: 0.7333333333, alpha: 1)), Color(#colorLiteral(red: 0.9450980392, green: 0.2745098039, blue: 0.3450980392, alpha: 1))]),
+                gradient: .init(colors: [Color(#colorLiteral(red: 0.9490196078, green: 0.4392156863, blue: 0.6117647059, alpha: 1)), Color(#colorLiteral(red: 1, green: 0.5803921569, blue: 0.4470588235, alpha: 1))]),
                 startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/,
                 endPoint: .trailing)
         )

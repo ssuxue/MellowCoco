@@ -15,6 +15,7 @@
 		083055412598A62D006F758C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 083055402598A62D006F758C /* SDWebImageSwiftUI */; };
 		083399B52599FF2B00191633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083399B42599FF2B00191633 /* User.swift */; };
 		083399BC259A01A100191633 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083399BB259A01A100191633 /* UserViewModel.swift */; };
+		085CD6A8259D93AF0098338C /* Dec-30-2020 23-27-44.gif in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6A7259D93AE0098338C /* Dec-30-2020 23-27-44.gif */; };
 		08684CBD259C723100C45AEF /* Periphery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684CBC259C723100C45AEF /* Periphery.swift */; };
 		089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD142595B21600EBC06C /* MellowCocoApp.swift */; };
 		089FAD172595B21600EBC06C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD162595B21600EBC06C /* ContentView.swift */; };
@@ -47,6 +48,7 @@
 		081A7C6E259CC1C6005E2E0E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		083399B42599FF2B00191633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		083399BB259A01A100191633 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		085CD6A7259D93AE0098338C /* Dec-30-2020 23-27-44.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Dec-30-2020 23-27-44.gif"; sourceTree = "<group>"; };
 		08684CBC259C723100C45AEF /* Periphery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periphery.swift; sourceTree = "<group>"; };
 		089FAD112595B21600EBC06C /* MellowCoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MellowCoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089FAD142595B21600EBC06C /* MellowCocoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MellowCocoApp.swift; sourceTree = "<group>"; };
@@ -95,9 +97,18 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		085CD6A6259D93760098338C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				085CD6A7259D93AE0098338C /* Dec-30-2020 23-27-44.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		089FAD082595B21600EBC06C = {
 			isa = PBXGroup;
 			children = (
+				085CD6A6259D93760098338C /* Images */,
 				089FAD132595B21600EBC06C /* MellowCoco */,
 				089FAD122595B21600EBC06C /* Products */,
 			);
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089FAD1C2595B21700EBC06C /* Preview Assets.xcassets in Resources */,
+				085CD6A8259D93AF0098338C /* Dec-30-2020 23-27-44.gif in Resources */,
 				089FAD192595B21700EBC06C /* Assets.xcassets in Resources */,
 				081A7C6C259CC01A005E2E0E /* loading-spinner.json in Resources */,
 			);

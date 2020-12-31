@@ -23,6 +23,8 @@
 		085CD6B5259D997A0098338C /* 2020-12-31-1.24.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6AE259D99790098338C /* 2020-12-31-1.24.19.png */; };
 		085CD6B6259D997A0098338C /* 2020-12-31-1.26.13.png in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6AF259D997A0098338C /* 2020-12-31-1.26.13.png */; };
 		085CD6B7259D997A0098338C /* 2020-12-31-1.25.42.png in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6B0259D997A0098338C /* 2020-12-31-1.25.42.png */; };
+		085CD6BB259D9EC00098338C /* 2020-12-31-1.50.37.png in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6B9259D9EBF0098338C /* 2020-12-31-1.50.37.png */; };
+		085CD6BC259D9EC00098338C /* 2020-12-31-1.50.57.png in Resources */ = {isa = PBXBuildFile; fileRef = 085CD6BA259D9EBF0098338C /* 2020-12-31-1.50.57.png */; };
 		08684CBD259C723100C45AEF /* Periphery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684CBC259C723100C45AEF /* Periphery.swift */; };
 		089FAD152595B21600EBC06C /* MellowCocoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD142595B21600EBC06C /* MellowCocoApp.swift */; };
 		089FAD172595B21600EBC06C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089FAD162595B21600EBC06C /* ContentView.swift */; };
@@ -63,6 +65,8 @@
 		085CD6AE259D99790098338C /* 2020-12-31-1.24.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2020-12-31-1.24.19.png"; sourceTree = "<group>"; };
 		085CD6AF259D997A0098338C /* 2020-12-31-1.26.13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2020-12-31-1.26.13.png"; sourceTree = "<group>"; };
 		085CD6B0259D997A0098338C /* 2020-12-31-1.25.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2020-12-31-1.25.42.png"; sourceTree = "<group>"; };
+		085CD6B9259D9EBF0098338C /* 2020-12-31-1.50.37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2020-12-31-1.50.37.png"; sourceTree = "<group>"; };
+		085CD6BA259D9EBF0098338C /* 2020-12-31-1.50.57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2020-12-31-1.50.57.png"; sourceTree = "<group>"; };
 		08684CBC259C723100C45AEF /* Periphery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periphery.swift; sourceTree = "<group>"; };
 		089FAD112595B21600EBC06C /* MellowCoco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MellowCoco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089FAD142595B21600EBC06C /* MellowCocoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MellowCocoApp.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		085CD6A6259D93760098338C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				085CD6B9259D9EBF0098338C /* 2020-12-31-1.50.37.png */,
+				085CD6BA259D9EBF0098338C /* 2020-12-31-1.50.57.png */,
 				085CD6AD259D99790098338C /* 2020-12-31-1.17.18.png */,
 				085CD6AB259D99790098338C /* 2020-12-31-1.21.21.png */,
 				085CD6AE259D99790098338C /* 2020-12-31-1.24.19.png */,
@@ -292,7 +298,9 @@
 				089FAD1C2595B21700EBC06C /* Preview Assets.xcassets in Resources */,
 				085CD6B5259D997A0098338C /* 2020-12-31-1.24.19.png in Resources */,
 				085CD6B7259D997A0098338C /* 2020-12-31-1.25.42.png in Resources */,
+				085CD6BC259D9EC00098338C /* 2020-12-31-1.50.57.png in Resources */,
 				085CD6A8259D93AF0098338C /* Dec-30-2020 23-27-44.gif in Resources */,
+				085CD6BB259D9EC00098338C /* 2020-12-31-1.50.37.png in Resources */,
 				089FAD192595B21700EBC06C /* Assets.xcassets in Resources */,
 				081A7C6C259CC01A005E2E0E /* loading-spinner.json in Resources */,
 				085CD6B2259D997A0098338C /* 2020-12-31-1.21.21.png in Resources */,

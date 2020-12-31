@@ -22,3 +22,7 @@
 <img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.26.40.png" alt="我的-未登录" width='375' />
 
 <img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.28.26.png" alt="登录界面" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.50.37.png" alt="我的-已登录" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.50.57.png" alt="主题" width='375' />

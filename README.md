@@ -9,4 +9,16 @@
 ![image](https://github.com/ssuxue/MellowCoco/blob/main/Images/Dec-30-2020%2023-27-44.gif)
 
 > 普通图片
-<img src="https://pic2.zhimg.com/80/v2-751e1e7b100ac74d741f6095096e7d43.jpg" alt="img" width='375' />
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.17.18.png" alt=''首页 width='375'/>
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.21.21.png" alt="点单界面" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.24.19.png" alt="点单" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.25.42.png" alt="百货" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.26.13.png" alt="订单" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.26.40.png" alt="我的-未登录" width='375' />
+
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.28.26.png" alt="登录界面" width='375' />

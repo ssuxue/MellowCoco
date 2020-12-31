@@ -9,4 +9,4 @@
 ![image](https://github.com/ssuxue/MellowCoco/blob/main/Images/Dec-30-2020%2023-27-44.gif)
 
 > 普通图片
-<img src="https://pic2.zhimg.com/80/v2-751e1e7b100ac74d741f6095096e7d43.jpg" alt="img" style="zoom: 40%;" />
+<img src="https://pic2.zhimg.com/80/v2-751e1e7b100ac74d741f6095096e7d43.jpg" alt="img" width='375' />

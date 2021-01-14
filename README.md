@@ -10,7 +10,7 @@
 
 > 普通图片
 
-<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.17.18.png" alt=''首页 width='375'/>
+<img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.17.18.png" alt='首页' width='375'/>
 
 <img src="https://github.com/ssuxue/MellowCoco/blob/main/Images/2020-12-31-1.21.21.png" alt="点单界面" width='375' />
 

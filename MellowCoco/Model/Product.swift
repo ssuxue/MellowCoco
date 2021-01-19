@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product : Identifiable, Decodable {
+struct Product : Identifiable, Codable {
     var id: Int
     var productCategoryId: Int
     var productAttributeIds: String
@@ -37,7 +37,7 @@ struct Product : Identifiable, Decodable {
     }
 }
 
-func getProducts(url: String, completion : @escaping (ProductResult)->()) {
+func getProducts(url: String, completion : @escaping (Result<Product>)->()) {
     let session = URLSession.shared
     
     session.dataTask(with: URL(string: url)!) { (data, _, err) in
@@ -48,7 +48,7 @@ func getProducts(url: String, completion : @escaping (ProductResult)->()) {
         
         // decoding JSON
         do {
-            let products = try JSONDecoder().decode(ProductResult.self, from: data!)
+            let products = try JSONDecoder().decode(Result<Product>.self, from: data!)
             
             completion(products)
         }

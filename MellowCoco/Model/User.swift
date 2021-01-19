@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct User: Identifiable, Decodable {
+struct User: Identifiable, Codable {
     var id: Int
     var username: String
     var password: String

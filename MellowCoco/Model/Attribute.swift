@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Attribute : Identifiable, Decodable {
+struct Attribute : Identifiable, Codable {
     var id: Int
     var name: String
     var inputList: String

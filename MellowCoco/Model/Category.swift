@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Category : Identifiable, Decodable {
+struct Category : Identifiable, Codable {
     var id : Int
     var name : String
     var icon : String
 }
 
-func getCategory(url: String, completion : @escaping (Result)->()) {
+func getCategory(url: String, completion : @escaping (Result<Category>)->()) {
 //    let session = URLSession(configuration: .default)
     let session = URLSession.shared
     
@@ -25,7 +25,7 @@ func getCategory(url: String, completion : @escaping (Result)->()) {
         
         // decoding JSON
         do {
-            let categories = try JSONDecoder().decode(Result.self, from: data!)
+            let categories = try JSONDecoder().decode(Result<Category>.self, from: data!)
             
             completion(categories)
         }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Theme: Identifiable, Decodable {
+struct Theme: Identifiable, Codable {
     var id: Int
     var name: String
     var colorName: String

@@ -8,21 +8,14 @@
 import Foundation
 
 // JSON Result
-struct Result : Decodable {
+struct Result<T: Codable> : Decodable {
     var code : Int
     var message: String
-    var data : [Category]
+    var data : [T] // Todo 这里应该是[T?]
 }
 
-// TODO 后面用泛型优化这一堆 Result
-struct ProductResult : Decodable {
-    var code : Int
-    var message: String
-    var data : [Product]
-}
-
-struct UserResult : Decodable {
-    var code : Int
-    var message: String
-    var data : [User]
-}
+//struct Result : Decodable {
+//    var code : Int
+//    var message: String
+//    var data : [Category]
+//}

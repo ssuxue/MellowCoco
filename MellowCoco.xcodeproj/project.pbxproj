@@ -48,6 +48,8 @@
 		08E450D525975E97007E3618 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450D425975E97007E3618 /* Product.swift */; };
 		08E450D9259762F3007E3618 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450D8259762F3007E3618 /* ProductViewModel.swift */; };
 		08E450DC259768EC007E3618 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E450DB259768EC007E3618 /* Attribute.swift */; };
+		08EF20EC25B5575F00BFC273 /* Melifluo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF20EB25B5575F00BFC273 /* Melifluo.swift */; };
+		08EF20EF25B55A6400BFC273 /* MelifluoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF20EE25B55A6400BFC273 /* MelifluoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		08E450D425975E97007E3618 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		08E450D8259762F3007E3618 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		08E450DB259768EC007E3618 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		08EF20EB25B5575F00BFC273 /* Melifluo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Melifluo.swift; sourceTree = "<group>"; };
+		08EF20EE25B55A6400BFC273 /* MelifluoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelifluoAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 				083399B42599FF2B00191633 /* User.swift */,
 				08C8705A259B361100A6DB12 /* Theme.swift */,
 				08684CBC259C723100C45AEF /* Periphery.swift */,
+				08EF20EB25B5575F00BFC273 /* Melifluo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			children = (
 				08BEC4692597095E004DE900 /* RequestAPI.swift */,
 				08BEC46F259727F5004DE900 /* CocoNetwork.swift */,
+				08EF20EE25B55A6400BFC273 /* MelifluoAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EF20EF25B55A6400BFC273 /* MelifluoAPI.swift in Sources */,
 				08E450D225975C8E007E3618 /* MyInfoView.swift in Sources */,
 				089FAD1E2595B21700EBC06C /* Persistence.swift in Sources */,
 				089FAD172595B21600EBC06C /* ContentView.swift in Sources */,
@@ -325,6 +332,7 @@
 				08E450D525975E97007E3618 /* Product.swift in Sources */,
 				089FAD2A2595B39A00EBC06C /* WelcomeView.swift in Sources */,
 				08BEC46625970751004DE900 /* Result.swift in Sources */,
+				08EF20EC25B5575F00BFC273 /* Melifluo.swift in Sources */,
 				089FAD212595B21700EBC06C /* MellowCoco.xcdatamodeld in Sources */,
 				08E450CC25975C3E007E3618 /* IndentView.swift in Sources */,
 				08C8705E259B387D00A6DB12 /* ThemeView.swift in Sources */,

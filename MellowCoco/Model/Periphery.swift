@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Periphery: Identifiable, Decodable {
+struct Periphery: Identifiable, Codable {
     var id: Int
     var image: String
     var name: String

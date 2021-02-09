@@ -60,9 +60,9 @@ struct Loader: View {
                     AngularGradient(
                         gradient: .init(colors: [.pink, .purple]),
                         center: .center),
-                    style: StrokeStyle(lineWidth: 6, lineCap: .round)
+                    style: StrokeStyle(lineWidth: 3, lineCap: .round)
                 )
-                .frame(width: 35, height: 35)
+                .frame(width: 20, height: 20)
                 .rotationEffect(.init(degrees: self.animate ? 360 : 0))
                 .animation(Animation.linear(duration: 0.7).repeatForever(autoreverses: false))
         }

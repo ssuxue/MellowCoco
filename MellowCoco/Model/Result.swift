@@ -8,7 +8,7 @@
 import Foundation
 
 // JSON Result
-struct Result<T: Codable> : Decodable {
+struct Result<T> : Decodable where T: Codable {
     var code : Int
     var message: String
     var data : [T] // Todo 这里应该是[T?]
